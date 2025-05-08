@@ -18,5 +18,7 @@ Stocks full list when click on stocks or View my stocks:
 
 all the css is not purely done by me it is done by the AI.
 
+This is how database structure looks like:
+![image](https://github.com/user-attachments/assets/0c657614-028e-459f-ac94-63a7a18d0b96)
 
 
