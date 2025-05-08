@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2eafc 100%);
+    margin: 0;
+    padding: 0;
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    padding: 32px 28px 24px 28px;
+    margin: 32px auto;
+    max-width: 520px;
+    border: none;
+    transition: box-shadow 0.2s;
+}
+
+.container:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.16);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 2.1em;
+    color: #3a7bd5;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3em;
+    color: #222;
+    border-left: 4px solid #3a7bd5;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.1em;
+    color: #3a7bd5;
+    margin-bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 12px 14px;
+    border: 1.5px solid #e0e7ef;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f6f8fb;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    margin-bottom: 2px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3a7bd5;
+    background: #fff;
+}
+
+button {
+    padding: 12px 0;
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+    box-shadow: 0 4px 16px rgba(58, 123, 213, 0.13);
+}
+
+a {
+    display: inline-block;
+    color: #3a7bd5;
+    background: #f1f7ff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    margin-top: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+a:hover {
+    background: #3a7bd5;
+    color: #fff;
+}
+
+textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 16px 8px 12px 8px;
+        margin: 18px auto;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+}
