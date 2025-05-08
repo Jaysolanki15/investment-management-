@@ -1,0 +1,185 @@
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2eafc 100%);
+    margin: 0;
+    padding: 0;
+    color: #212529;
+    min-height: 100vh;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #222e3c;
+    color: #fff;
+    padding: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 2px 0 12px rgba(34, 46, 60, 0.05);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    color: #3a7bd5;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 30px;
+}
+
+.sidebar a {
+    color: #b4c5e4;
+    text-decoration: none;
+    font-size: 1.05em;
+    padding: 8px 0;
+    border-left: 4px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    color: #fff;
+    border-left: 4px solid #3a7bd5;
+    background: rgba(58,123,213,0.07);
+    padding-left: 10px;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 32px 24px;
+    width: 100%;
+    background: transparent;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(58, 123, 213, 0.07);
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 32px 0 rgba(58, 123, 213, 0.14);
+}
+
+.card-title {
+    font-size: 1.1em;
+    color: #3a7bd5;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.card-value {
+    font-size: 2em;
+    font-weight: 700;
+    color: #212529;
+}
+
+.card-link {
+    margin-top: 12px;
+    color: #3a7bd5;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 12px 14px;
+    border: 1.5px solid #e0e7ef;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f6f8fb;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3a7bd5;
+    background: #fff;
+}
+
+button {
+    padding: 12px 0;
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+    box-shadow: 0 4px 16px rgba(58, 123, 213, 0.13);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        width: 60px;
+        padding-left: 0;
+        align-items: center;
+    }
+    .sidebar h2,
+    .sidebar nav a {
+        display: none;
+    }
+    .main-content {
+        margin-left: 60px;
+    }
+}
